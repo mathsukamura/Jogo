@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.cabecalho{
+    background-color: #333;
+    width: 100%;
+    height: 40px;
+}
+h1{
+    color: aliceblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+}
+.game-board{
+    width: 100%;
+    height: 700px;
+    border: 1px solid #333;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    background-image: url(..//image/2.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.cloud{
+    position: absolute;
+    animation: clouds 6s infinite linear;
+    width: 800px;
+}
+
+.sonic{
+    position: absolute;
+    bottom: 0;
+    width: 100px;
+    left: 200px;
+    margin-bottom: 40px
+}
+
+.jump{
+    animation: jump 1000ms;
+}
+
+.eggman{
+    position: absolute;
+    bottom: 0;
+    width: 170px;
+    animation: eggman-animation 2s infinite linear;
+    margin-bottom: 50px;
+}
+
+
+@keyframes eggman-animation{
+    from{
+        right: -200px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes jump{
+    0%{
+        bottom: 0;
+    }
+    40%{
+        bottom: 180px;
+    }
+
+    50%{
+        bottom: 180px;
+    }
+    60%{
+        bottom: 180px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+
+@keyframes clouds{
+
+    from{
+        right: -800px;
+    }
+    to{
+        right: 100%;
+    }
+
+}
+
+#inverter {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
